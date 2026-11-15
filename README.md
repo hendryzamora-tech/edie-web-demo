@@ -1,17 +1,15 @@
-# EDIE WEB Preview v2.3 — Interactive Intelligence Workspace
+# EDIE WEB Preview v2.4 — Advanced Market Visualization & Multi-Engine Workspace
 
-Static public DEMO only. No API, FastAPI, database, browser storage, cookies, credentials, or authenticated market data.
+Static public DEMO only. The package contains `index.html`, `app.js`, `styles.css` and this README.
 
-## v2.3 enhancements
-- Engine Center cards open accessible read-only conceptual detail dialogs.
-- Stock Intelligence ticker input opens a source-validation checklist, with all values UNAVAILABLE.
-- Mobile and desktop styling preserved. Quick Navigator Ctrl+K retained.
-- All 13 sections retained; no operational scanner, trading signal, or live connector.
+## Changes from v2.3
+- Control Tower and Market Intelligence: selectable deterministic synthetic scenarios (neutral, expansion, compression) and chart views (structure, participation).
+- Engine Center: compare the read-only purpose, required evidence, and blocked runtime status of SCAN EBB, SCAN DSI and BANDAR DSI.
+- Responsive controls and explicit no-market-data warnings.
+- Existing 13-page navigation, Ctrl+K quick navigator, engine detail and ticker checklist retained.
 
-## GitHub Pages
-Upload `index.html`, `app.js`, `styles.css`, `README.md` to the root of the public DEMO-only repository after publication/security review. Do not upload EDIE runtime, DB, ZIP handoff, keys, or personal data.
+## Security and integrity
+No network calls, storage, authentication, backend, credentials, database, or live market data. Synthetic charts must never be interpreted as actual market movement or predictions. Gigantum and ARJUM remain NOT_CONNECTED. Production FINAL_GATE remains BLOCK.
 
-## Test
-Open `index.html`, enter preview, visit Engine Center and select SCAN EBB, then Stock Intelligence and preview ticker BBCA. Confirm details are DEMO-only and no network or storage is used. Test mobile sidebar and Ctrl+K.
-
-Operational EDIE FINAL_GATE remains BLOCK. Gigantum and ARJUM NOT_CONNECTED.
+## GitHub Pages update
+After reviewing the four files, upload `index.html`, `app.js`, `styles.css` to the root of the public DEMO-only repository, replacing the prior version. Commit, wait for GitHub Pages deployment, and hard refresh. Do not upload EDIE runtime or secrets.
