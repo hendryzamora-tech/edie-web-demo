@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>EDIE WEB — Isolated Preview</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="login-view" class="login-shell">
+    <section class="login-card" aria-labelledby="preview-title">
+      <p class="eyebrow">EDIE WEB · STATIC PREVIEW</p>
+      <h1 id="preview-title">Institutional Intelligence, illustrated safely.</h1>
+      <p>This isolated screen has no backend, account, database, market feed, or real authentication.</p>
+      <button id="demo-login" type="button">Enter DEMO preview</button>
+      <p class="notice">DEMO ONLY · NOT FOR INVESTMENT DECISIONS · NO LIVE CONNECTORS</p>
+    </section>
+  </main>
+
+  <div id="app-view" class="app-shell" hidden>
+    <aside class="sidebar">
+      <div class="brand"><span class="mark">E</span><span>EDIE <small>PREVIEW</small></span></div>
+      <nav aria-label="Preview modules">
+        <button class="nav-item active" data-module="control">Control Tower</button>
+        <button class="nav-item" data-module="stock">Stock Intelligence</button>
+        <button class="nav-item" data-module="scanner">Scanner Center</button>
+        <button class="nav-item" data-module="bandar">Bandar Intelligence</button>
+        <button class="nav-item" data-module="portfolio">Portfolio & Watchlist</button>
+        <button class="nav-item" data-module="reports">Reports</button>
+      </nav>
+      <p class="sidebar-foot">Isolated static artifact<br>All values are DEMO.</p>
+    </aside>
+    <section class="workspace">
+      <header class="topbar">
+        <button id="menu-toggle" class="mobile-menu" type="button" aria-label="Toggle navigation">☰</button>
+        <div><p class="eyebrow">PRIVATE PREVIEW MODE</p><h2 id="module-title">Control Tower</h2></div>
+        <div class="status-pill">● DEMO · DISCONNECTED</div>
+      </header>
+      <section id="module-content" aria-live="polite"></section>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
