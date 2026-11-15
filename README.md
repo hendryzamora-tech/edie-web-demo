@@ -1,22 +1,17 @@
-# EDIE WEB isolated static preview
+# EDIE WEB PREVIEW v2 — Institutional Interactive Dashboard
 
-This directory is independent from EDIE runtime code. It has no backend calls, storage, cookies, credentials, database, analytics, remote assets, user records, or market-data connector. Every status and module value is illustrative DEMO content.
+Public **static DEMO** isolated from operational EDIE WEB. It contains no backend, authentication, cookies, local/session storage, API requests, database, credentials, broker data, or live market feed. Charts are synthetic decorative shapes and not IDX data. All locked engine baselines remain unchanged. Production release gate stays BLOCKED.
+
+## Files
+- `index.html` — responsive login simulation and app shell
+- `styles.css` — black/gold responsive design and `[hidden]` handling
+- `app.js` — 13-module interactive client-only navigation and DEMO actions
 
 ## Local preview
+Run `python -m http.server 8090 --bind 127.0.0.1` from this directory, then open http://127.0.0.1:8090/. Or open index.html directly.
 
-From this directory, serve only this directory with a local static server, for example:
+## GitHub Pages update (manual, authorized only)
+Upload **only** `index.html`, `styles.css`, and `app.js` to the public `edie-web-demo` repository root, replacing the previous DEMO files. Do not upload this project's operational code, databases, secrets, logs, or deployment handoff archives. Keep GitHub Pages on main / (root). Verify the site and mobile navigation. No commit/push/deployment is performed by this package.
 
-```text
-python -m http.server 8090 --bind 127.0.0.1
-```
-
-Then open `http://127.0.0.1:8090/`. Stop the server after review. The preview must not be substituted for the operational EDIE WEB or used to test real login/data features.
-
-## Manual publication-review files
-
-- `index.html`
-- `styles.css`
-- `app.js`
-- `README.md`
-
-Review must confirm that all market/module content remains DEMO, that no runtime/static asset has been copied in, and that no credential, user, or production configuration is added before any external publication.
+## Validation limits
+Static checks and JS syntax checks do not prove browser acceptance or production readiness. Gigantum and ARJUM remain NOT_CONNECTED. No scanner executes.
