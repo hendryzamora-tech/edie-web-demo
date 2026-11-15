@@ -8,3 +8,14 @@
 .v21-tag{font-size:10px;letter-spacing:.07em;color:#d5b879;border:1px solid #615238;border-radius:20px;padding:7px 10px}
 .v21-toolbar .mini-btn{cursor:pointer}
 @media(max-width:640px){.v21-toolbar{align-items:stretch}.v21-toolbar .mini-btn{flex:1}.v21-tag{max-width:100%}}
+
+/* EDIE v2.2: accessible quick navigator and consistent hidden state */
+[hidden]{display:none!important}
+.quick-dialog{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:2000;display:flex;align-items:flex-start;justify-content:center;padding:12vh 16px 20px}
+.quick-inner{width:min(620px,100%);max-height:78vh;overflow:auto;background:#111b2b;border:1px solid #7b6342;border-radius:14px;padding:22px;box-shadow:0 30px 100px #000b}
+.quick-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:15px;color:#e9c991}
+.quick-inner .field{width:100%;box-sizing:border-box;margin-bottom:12px}
+.quick-results{display:grid;gap:6px;max-height:48vh;overflow:auto}
+.quick-result{border:1px solid #29374b;border-radius:8px;padding:12px;text-align:left;background:#172338;color:#e9edf4;cursor:pointer;font:inherit}
+.quick-result:hover,.quick-result:focus-visible{border-color:#d4ad67;background:#26344a;outline:2px solid transparent}
+@media(max-width:700px){.quick-dialog{padding-top:7vh}.quick-inner{padding:15px}#quick-nav{font-size:12px}}
