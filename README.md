@@ -1,16 +1,15 @@
-# EDIE WEB PREVIEW v2.5 — Institutional Research Terminal
+# EDIE WEB PREVIEW v2.6 — Institutional Decision Support & Risk Workspace
 
-Static public DEMO only. No backend, cookies, browser storage, real authentication, API calls, database, or authenticated market records.
+Static public DEMO for GitHub Pages. Builds upon v2.5 without altering any locked engine or operational source.
 
-## New in v2.5
-- Stock Intelligence: ticker-label input, Daily/Weekly/Monthly selection, five interactive research tabs, evidence admission gates.
-- Broker Flow: broker selector and empty inventory matrix, no fictitious average or flow values.
-- Corporate Actions: category selector, empty disclosure calendar, and source gates.
-- Engine Center: independent read-only EBB / DSI / BANDAR comparison.
-- All v2.4 synthetic charts and navigation retained.
+## New features
+- Manual evidence-gate checklist (LOCATION → EVIDENCE → CONFLUENCE → RISK/REWARD → PROBABILITY). Checking a box **never** certifies the gate.
+- Hypothetical long-only position sizing calculator: entry, stop, target, capital, percent risk; calculates R:R and lot-rounded shares.
+- Both features in Stock Intelligence; evidence checklist also in Engine Center, risk sandbox also in Portfolio Intelligence.
+- All state in memory only; no browser storage, network calls, backend, login, or real market data.
 
-## Publish
-Upload `index.html`, `app.js`, `styles.css`, `README.md` to the root of the dedicated public DEMO GitHub Pages repository, only after authorized review. Never upload the EDIE operational repository or handoff package.
+## Deployment
+Upload index.html, app.js, styles.css, README.md to root of public GitHub Pages DEMO repository. Do not upload operational sources, secrets, datasets, or real accounts.
 
-## Safety
-All graphics synthetic. Gigantum and ARJUM NOT_CONNECTED. No scanner execution, probability, scores, investment signals or user data. EDIE operational FINAL_GATE remains BLOCK.
+## Limits
+All inputs are hypothetical, with no brokerage fees, slippage, liquidity, historical backtest, probability or trading signal. Gigantum/ARJUM NOT_CONNECTED. FINAL_GATE BLOCK.
