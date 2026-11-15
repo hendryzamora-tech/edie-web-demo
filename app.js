@@ -109,3 +109,40 @@ const priorRender=render;
 render=function(id){priorRender(id);updateV24()};
 document.getElementById('content').addEventListener('change',e=>{if(['v24-scenario','v24-view','v24-engine'].includes(e.target.id))updateV24()});
 document.getElementById('content').addEventListener('click',e=>{if(e.target.closest('#v24-reset')){document.getElementById('v24-scenario').value='neutral';document.getElementById('v24-view').value='structure';updateV24()}});
+
+
+// v2.5 — institutional research terminal. All interactions are local and ephemeral.
+// No data feeds, no trading calculations, no storage, and no network requests.
+const researchTabs=['Overview','Multi-timeframe','Broker intelligence','Corporate actions','Evidence gates'];
+let researchTab='Overview';
+let researchSymbol='BBCA';
+let researchFrame='Daily';
+const researchDescriptions={
+ 'Overview':['Identity & provenance','Ticker is an illustrative research label, not a market-data lookup.','Source as-of: UNAVAILABLE','Validation: BLOCKED'],
+ 'Multi-timeframe':['Daily / Weekly / Monthly','Structure confirmation requires independent, timestamped OHLCV for every timeframe.','OHLCV: UNAVAILABLE','Trend / demand / supply: NOT CALCULATED'],
+ 'Broker intelligence':['Broker inventory & consensus','AK / ZP / KZ / BK / AI / RX / CS / YU need authorized, reconciled broker records.','Broker average: UNAVAILABLE','Accumulation / distribution: NOT CALCULATED'],
+ 'Corporate actions':['Events & issuer disclosures','Events require official IDX/OJK/issuer documents and effective dates.','Corporate action feed: NOT_CONNECTED','Impact assessment: NOT CALCULATED'],
+ 'Evidence gates':['Location → Evidence → Confluence → Risk/Reward → Probability','A score is not a probability. Backtested probability requires historical validation.','Engine status: LOCKED / NOT EXECUTED','Signals: DISABLED']
+};
+function researchPanel(){const d=researchDescriptions[researchTab];return `<div class="v25-research"><div class="v25-bar"><span class="v25-eyebrow">INSTITUTIONAL RESEARCH TERMINAL · STATIC DEMO</span><span class="state red">NO MARKET DATA</span></div><div class="v25-tools"><label for="v25-ticker">Research ticker</label><input id="v25-ticker" class="field" maxlength="12" value="${esc(researchSymbol)}" aria-label="Illustrative ticker"><button type="button" class="mini-btn" id="v25-apply">Open research layout</button><label for="v25-frame">Timeframe</label><select id="v25-frame"><option ${researchFrame==='Daily'?'selected':''}>Daily</option><option ${researchFrame==='Weekly'?'selected':''}>Weekly</option><option ${researchFrame==='Monthly'?'selected':''}>Monthly</option></select></div><p class="micro">Ticker is only a visual label. No API lookup or price history is requested.</p><div class="v25-tabs" role="tablist" aria-label="Research sections">${researchTabs.map(t=>`<button type="button" role="tab" aria-selected="${t===researchTab}" class="v25-tab ${t===researchTab?'active':''}" data-v25-tab="${t}">${t}</button>`).join('')}</div><div class="grid two"><div class="card v25-hero"><div class="v25-eyebrow">${esc(researchSymbol)} · ${esc(researchFrame)} · DEMO</div><h2>${d[0]}</h2><p>${d[1]}</p>${v24Chart('neutral','structure')}<div class="micro">SYNTHETIC SHAPE · NOT ${esc(researchSymbol)} PRICE ACTION</div></div><div class="card"><h3>Evidence admission</h3><div class="v25-check"><span>Source identity</span><strong>NOT VERIFIED</strong></div><div class="v25-check"><span>Timestamp & provenance</span><strong>UNAVAILABLE</strong></div><div class="v25-check"><span>${d[2]}</span><strong>BLOCKED</strong></div><div class="v25-check"><span>${d[3]}</span><strong>DISABLED</strong></div><div class="v25-warning">No EBB Score, DSI Score, broker average, target, stop loss, or probability can be generated.</div></div></div></div>`}
+const stockV24=pages.stock;
+pages.stock=function(){return researchPanel()+`<section class="section">${section('Original stock intelligence overview',stockV24(),'PROVENANCE / GOVERNANCE')}</section>`};
+function brokerMatrix(){return `<div class="v25-research"><div class="v25-bar"><span class="v25-eyebrow">BROKER INVENTORY WORKSPACE</span><span class="state red">NO AUTHORIZED FLOW</span></div><div class="v25-tools"><label for="v25-broker">Broker code</label><select id="v25-broker">${['AK','ZP','KZ','BK','AI','RX','CS','YU'].map(x=>`<option>${x}</option>`).join('')}</select><span id="v25-broker-state" class="v21-tag">AK · NOT_CONNECTED</span></div>${table(['BROKER','NET FLOW','AVG BUY','AVG SELL','INVENTORY'],['AK','ZP','KZ','BK','AI','RX','CS','YU'].map(x=>[x,'—','—','—','UNAVAILABLE']))}<p class="micro">Rows are empty placeholders, not broker-flow observations. No accumulation, distribution, or consensus calculated.</p></div>`}
+const brokerV24=pages.broker;
+pages.broker=function(){return brokerMatrix()+brokerV24()};
+function caWorkspace(){return `<div class="v25-research"><div class="v25-bar"><span class="v25-eyebrow">CORPORATE ACTION RESEARCH WORKSPACE</span><span class="state red">DISCLOSURES NOT INGESTED</span></div><div class="v25-tools"><label for="v25-ca-type">Event category</label><select id="v25-ca-type"><option>All event types</option><option>Rights issue</option><option>Stock split</option><option>Dividend</option><option>Merger / acquisition</option><option>Other disclosure</option></select><span id="v25-ca-status" class="v21-tag">All event types · UNAVAILABLE</span></div><div class="grid three">${metric('Official disclosures','0','NO VALIDATED EVENT RECORDS')}${metric('Upcoming calendar','—','NOT CONNECTED')}${metric('CA–EBB confluence','DISABLED','LOCKED ENGINE NOT EXECUTED','red')}</div>${table(['EVENT','ANNOUNCED','EFFECTIVE','SOURCE','VALIDATION'],[['No verified records','—','—','IDX / issuer required','BLOCKED']])}</div>`}
+const caV24=pages.corporate;
+pages.corporate=function(){return caWorkspace()+caV24()};
+function crossEngine(){return `<div class="v25-research"><div class="v25-bar"><span class="v25-eyebrow">MULTI-ENGINE RESEARCH BOARD</span><span class="state gray">READ-ONLY CONCEPT</span></div><div class="grid three">${[['SCAN EBB','Breakout & participation','Validated OHLCV + volume'],['SCAN DSI','Demand & reversal','Qualified demand + evidence'],['BANDAR DSI','Broker flow & consensus','Authorized broker inventory']].map(([name,focus,need])=>`<div class="card"><div class="v25-eyebrow">${name}</div><h3>${focus}</h3><p class="micro">Evidence: ${need}</p><div class="v25-warning">LOCKED · NOT EXECUTED</div></div>`).join('')}</div><p class="micro">This comparison is documentation, not engine fusion or cross-engine scoring.</p></div>`}
+const engineV24=pages.engine;
+pages.engine=function(){return crossEngine()+engineV24()};
+const contentV25=document.getElementById('content');
+contentV25.addEventListener('click',e=>{
+ const tab=e.target.closest('[data-v25-tab]');if(tab){researchTab=tab.dataset.v25Tab;render('stock');return}
+ if(e.target.closest('#v25-apply')){const inp=document.getElementById('v25-ticker');const cleaned=inp.value.toUpperCase().replace(/[^A-Z0-9.]/g,'').slice(0,12);if(!cleaned){toast('Masukkan kode ticker contoh.');return}researchSymbol=cleaned;render('stock');toast('Research layout updated · no market lookup performed');}
+});
+contentV25.addEventListener('change',e=>{
+ if(e.target.id==='v25-frame'){researchFrame=e.target.value;render('stock')}
+ if(e.target.id==='v25-broker'){document.getElementById('v25-broker-state').textContent=e.target.value+' · NOT_CONNECTED'}
+ if(e.target.id==='v25-ca-type'){document.getElementById('v25-ca-status').textContent=e.target.value+' · UNAVAILABLE'}
+});

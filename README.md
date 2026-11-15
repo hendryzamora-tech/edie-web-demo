@@ -1,15 +1,16 @@
-# EDIE WEB Preview v2.4 — Advanced Market Visualization & Multi-Engine Workspace
+# EDIE WEB PREVIEW v2.5 — Institutional Research Terminal
 
-Static public DEMO only. The package contains `index.html`, `app.js`, `styles.css` and this README.
+Static public DEMO only. No backend, cookies, browser storage, real authentication, API calls, database, or authenticated market records.
 
-## Changes from v2.3
-- Control Tower and Market Intelligence: selectable deterministic synthetic scenarios (neutral, expansion, compression) and chart views (structure, participation).
-- Engine Center: compare the read-only purpose, required evidence, and blocked runtime status of SCAN EBB, SCAN DSI and BANDAR DSI.
-- Responsive controls and explicit no-market-data warnings.
-- Existing 13-page navigation, Ctrl+K quick navigator, engine detail and ticker checklist retained.
+## New in v2.5
+- Stock Intelligence: ticker-label input, Daily/Weekly/Monthly selection, five interactive research tabs, evidence admission gates.
+- Broker Flow: broker selector and empty inventory matrix, no fictitious average or flow values.
+- Corporate Actions: category selector, empty disclosure calendar, and source gates.
+- Engine Center: independent read-only EBB / DSI / BANDAR comparison.
+- All v2.4 synthetic charts and navigation retained.
 
-## Security and integrity
-No network calls, storage, authentication, backend, credentials, database, or live market data. Synthetic charts must never be interpreted as actual market movement or predictions. Gigantum and ARJUM remain NOT_CONNECTED. Production FINAL_GATE remains BLOCK.
+## Publish
+Upload `index.html`, `app.js`, `styles.css`, `README.md` to the root of the dedicated public DEMO GitHub Pages repository, only after authorized review. Never upload the EDIE operational repository or handoff package.
 
-## GitHub Pages update
-After reviewing the four files, upload `index.html`, `app.js`, `styles.css` to the root of the public DEMO-only repository, replacing the prior version. Commit, wait for GitHub Pages deployment, and hard refresh. Do not upload EDIE runtime or secrets.
+## Safety
+All graphics synthetic. Gigantum and ARJUM NOT_CONNECTED. No scanner execution, probability, scores, investment signals or user data. EDIE operational FINAL_GATE remains BLOCK.
