@@ -1,16 +1,16 @@
-# EDIE WEB PREVIEW v2.8 — Institutional Research Report Builder
+# EDIE WEB PREVIEW v2.9 — Institutional Research Validation & Approval Workflow
 
-Static public DEMO for GitHub Pages. Based on v2.7, retaining its journal, navigation and prior interactive modules.
+Based on v2.8, retaining the existing 13 navigation modules, Research Journal, Report Builder, Risk Workspace and prior DEMO components.
 
-## New in v2.8
-- Structured manual research report with executive summary, sector, fundamental, technical, broker flow, corporate actions, risk, provenance, and verification plan.
-- Import a temporary note from the v2.7 Research Journal.
-- Preview the report, export JSON, and print/save PDF using the browser print dialog.
-- All source references and timestamps are user-entered and **UNVERIFIED**. No automatic market data, backtesting, scoring, signals, source validation, persistence, or certification.
-- Draft and journal are in memory only and disappear after refresh. Export before leaving. Do not enter confidential information.
+## Added in v2.9
+- Field-completeness checklist (12 fields). Percentage is administrative completeness only, **not** confidence, quality, or probability.
+- Manual evidence classifications: UNASSESSED, INSUFFICIENT, REFERENCED_UNVERIFIED, MANUAL_REVIEWED_UNVERIFIED. No verified category.
+- Manual review statuses: NOT_REVIEWED, NEEDS_REVISION, READY_FOR_EXTERNAL_VALIDATION, ARCHIVED. The ready-for-validation status requires all fields to be filled but is **not** approval/certification.
+- Reviewer alias, rationale, session-only review event history, and exportable JSON record. No authentication, persistence, immutable audit ledger, automatic provenance checking, or approval authority.
+- Production remains BLOCK; Gigantum and ARJUM NOT_CONNECTED; no real market data or execution.
 
 ## Deployment
-Upload `index.html`, `app.js`, `styles.css`, and `README.md` to the root of the public `edie-web-demo` GitHub Pages repository, replacing previous DEMO files. Never upload operational EDIE code, keys, databases or private data.
+Upload index.html, app.js, styles.css and README.md to the root of the public edie-web-demo GitHub Pages repo, replacing previous DEMO files. Never publish real data, credentials, keys, operational source, or private records.
 
-## Governance
-SCAN EBB, SCAN DSI, BANDAR DSI and all locked EDIE engines are not changed or executed. Gigantum / ARJUM remain NOT_CONNECTED. EDIE WEB production release gate remains BLOCK.
+## Test
+Open Reports & Infographics, inspect v2.9 checklist, generate a report, record manual review, export JSON, refresh to confirm records disappear.
