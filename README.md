@@ -1,22 +1,17 @@
-# EDIE WEB PREVIEW v2.2 — Interactive Intelligence Workspace
+# EDIE WEB Preview v2.3 — Interactive Intelligence Workspace
 
-Isolated static public DEMO. No backend, credentials, cookies, localStorage, remote APIs, database, live data, or authentic market analysis. All EDIE master engines remain locked and unchanged.
+Static public DEMO only. No API, FastAPI, database, browser storage, cookies, credentials, or authenticated market data.
 
-## Changes from v2.1
-- Quick Navigator: button on topbar, search 13 modules, Ctrl+K shortcut, Esc to close, mobile-friendly overlay.
-- Control Tower: visual roadmap showing preview, source-admission and production blockers.
-- Fixed `[hidden]` CSS handling; date no longer presented as a live timestamp.
-- Existing timeframe, broker selector, module navigation and source-integrity explanations retained.
+## v2.3 enhancements
+- Engine Center cards open accessible read-only conceptual detail dialogs.
+- Stock Intelligence ticker input opens a source-validation checklist, with all values UNAVAILABLE.
+- Mobile and desktop styling preserved. Quick Navigator Ctrl+K retained.
+- All 13 sections retained; no operational scanner, trading signal, or live connector.
 
-## Publish to GitHub Pages
-Upload only `index.html`, `app.js`, `styles.css` and this README to the approved PUBLIC DEMO repository root. Do not upload ZIP or operational EDIE source. Commit only after human publication review. GitHub Pages main / (root).
+## GitHub Pages
+Upload `index.html`, `app.js`, `styles.css`, `README.md` to the root of the public DEMO-only repository after publication/security review. Do not upload EDIE runtime, DB, ZIP handoff, keys, or personal data.
 
-## Verification
-1. Enter preview and verify Control Tower.
-2. Click `Cari modul`, search `Broker` and open Broker Flow.
-3. Press Ctrl+K (desktop) and Esc to close.
-4. Change Broker and Market timeframe: labels only, no real data.
-5. Test mobile menu and navigate all 13 modules.
-6. Confirm no authenticated data, connector, or trading signals.
+## Test
+Open `index.html`, enter preview, visit Engine Center and select SCAN EBB, then Stock Intelligence and preview ticker BBCA. Confirm details are DEMO-only and no network or storage is used. Test mobile sidebar and Ctrl+K.
 
-Production release remains BLOCKED.
+Operational EDIE FINAL_GATE remains BLOCK. Gigantum and ARJUM NOT_CONNECTED.
