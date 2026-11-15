@@ -1,0 +1,10 @@
+{
+  "scope": "static checks only; browser and production not certified",
+  "checks": {
+    "javascript_syntax": true,
+    "html_parse": true,
+    "13_modules_declared": true,
+    "readiness_gates": true,
+    "production_block": true
+  }
+}

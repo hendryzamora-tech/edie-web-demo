@@ -1,0 +1,12 @@
+{
+  "build": "v3.0",
+  "origin": "v2.9",
+  "kind": "STATIC_DEMO",
+  "release_gate": "BLOCK",
+  "files": {
+    "index.html": "1cb23196c71fbeca571d170aa126a151a5285f84479edd18ea8d56c1a4b4d112",
+    "app.js": "7f6c5ec9488cd679c513fc85ebd45e968f4b6efd3309f5115fe7ca75ce26cde5",
+    "styles.css": "6921dd4bc9741b38abc892369b9c0694d0ff83d072a5dca92e23d6a6746c7072",
+    "README.md": "bbadb936d9080fb1025e50f3591b2c3beef5c9631a3ad1b95198ceb11c886d8f"
+  }
+}
