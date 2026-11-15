@@ -1,16 +1,16 @@
-# EDIE WEB PREVIEW v2.7 — Institutional Workflow & Research Journal
+# EDIE WEB PREVIEW v2.8 — Institutional Research Report Builder
 
-Static GitHub Pages DEMO based on v2.6, preserving its UI modules and features.
+Static public DEMO for GitHub Pages. Based on v2.7, retaining its journal, navigation and prior interactive modules.
 
-## v2.7 additions
-- Reports & Infographics: session-only manual research journal with ticker, thesis, claimed evidence, risks, next action and research status.
-- Add/delete/clear notes, export JSON/CSV and browser print report.
-- Stock Intelligence shortcut to journal.
-- Export CSV protects against spreadsheet formula injection. All user text is HTML-escaped.
-- Max 50 notes per session. Nothing persists after refresh, exit or tab close. Exports are user-triggered downloads.
+## New in v2.8
+- Structured manual research report with executive summary, sector, fundamental, technical, broker flow, corporate actions, risk, provenance, and verification plan.
+- Import a temporary note from the v2.7 Research Journal.
+- Preview the report, export JSON, and print/save PDF using the browser print dialog.
+- All source references and timestamps are user-entered and **UNVERIFIED**. No automatic market data, backtesting, scoring, signals, source validation, persistence, or certification.
+- Draft and journal are in memory only and disappear after refresh. Export before leaving. Do not enter confidential information.
 
 ## Deployment
-Upload index.html, app.js, styles.css, README.md to the root of the public edie-web-demo GitHub Pages repository. Replace DEMO files only.
+Upload `index.html`, `app.js`, `styles.css`, and `README.md` to the root of the public `edie-web-demo` GitHub Pages repository, replacing previous DEMO files. Never upload operational EDIE code, keys, databases or private data.
 
-## Security and scope
-No network, backend, credentials, real authentication, storage, official audit ledger, market data, verified sources, backtest, signals or probability. Do not enter confidential information. Gigantum/ARJUM NOT_CONNECTED; operational FINAL_GATE BLOCK. All master engines and production baseline unchanged.
+## Governance
+SCAN EBB, SCAN DSI, BANDAR DSI and all locked EDIE engines are not changed or executed. Gigantum / ARJUM remain NOT_CONNECTED. EDIE WEB production release gate remains BLOCK.
